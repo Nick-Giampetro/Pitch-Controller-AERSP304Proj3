@@ -11,4 +11,4 @@ D = 0;
 sys = ss(A,B,C,D);
 
 % Convert State Space Representation to a Transfer Function
-[b,a] = ss2tf(A,B,C,D)          % b returns transfer function numerator coefficients, a returns denominator coefficients
+[N,D] = ss2tf(A,B,C,D)          % b returns transfer function numerator coefficients, a returns denominator coefficients
