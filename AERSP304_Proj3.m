@@ -16,5 +16,7 @@ sys = ss(A,B,C,D);
 % Find Poles and Zeros
 [Z,P,k] = tf2zp(num,den)
 
+step(sys)           % response for the step input
+
 
 
