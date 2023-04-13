@@ -14,4 +14,5 @@ sys = ss(A,B,C,D);
 [num,den] = ss2tf(A,B,C,D);          % num returns transfer function numerator coefficients, den returns denominator coefficients
 
 % Find Poles and Zeros
-P = pole(sys)
+P = pole(sys);
+Z = zero(sys);
