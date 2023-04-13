@@ -14,11 +14,11 @@ sys = ss(A,B,C,D);
 [num,den] = ss2tf(A,B,C,D);          % num returns transfer function numerator coefficients, den returns denominator coefficients
 
 % Find Poles and Zeros
-[Z,P,k] = tf2zp(num,den)
+[Z,P,k] = tf2zp(num,den);
 
 % Step Input Response
 opt = stepDataOptions('StepAmplitude',.2);           % inputting step input of elevator
-step(sys,opt)                       % response for the step input
+step(sys,opt);                       % response for the step input
 
 
 
