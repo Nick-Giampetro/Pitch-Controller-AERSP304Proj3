@@ -17,7 +17,7 @@ sys = ss(A,B,C,D);
 [Z,P,k] = tf2zp(num,den)
 
 % Step Input Response
-opt = stepDataOptions('StepAmplitude',2);           % inputting step input of elevator
+opt = stepDataOptions('StepAmplitude',.2);           % inputting step input of elevator
 step(sys,opt)                       % response for the step input
 
 
