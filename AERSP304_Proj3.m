@@ -18,7 +18,7 @@ sys = ss(A,B,C,D);
 
 % Step Input Response
 opt = stepDataOptions('StepAmplitude',.2);           % inputting step input of elevator
-step(sys,opt);                       % response for the step input
+step(sys,opt);                                       % response for the step input
 
 
 
