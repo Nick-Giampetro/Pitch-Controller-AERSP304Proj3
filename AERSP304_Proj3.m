@@ -23,8 +23,10 @@ opt = stepDataOptions('StepAmplitude',.2) ;           % inputting step input of 
 step(G_open,opt) ;                                       % response for the step input
 
 % Closed Transfer Function
-G = tf(num,den) 
 thetaDes = 0.2 ;
+G = tf(num,den) 
+C = tf(den,(thetaDes-num))
+
 Gcl = tf(num,thetaDes)
 
-feedback(Gcl)
+Gcl = feedback(G,C,-1)
