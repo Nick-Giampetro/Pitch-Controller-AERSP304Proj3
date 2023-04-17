@@ -29,4 +29,8 @@ C = tf(den,(thetaDes-num))
 
 Gcl = tf(num,thetaDes)
 
+
 Gcl = feedback(G,C,-1)
+
+figure
+step(Gcl,opt)
