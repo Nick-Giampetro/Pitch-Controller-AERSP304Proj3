@@ -13,7 +13,7 @@ D = 0 ;
 G_open = ss(A,B,C,D) ;
 
 % Convert State Space Representation to a Transfer Function
-[num,den] = ss2tf(A,B,C,D) ;          % num returns transfer function numerator coefficients, den returns denominator coefficients
+[num,den] = ss2tf(A,B,C,D)           % num returns transfer function numerator coefficients, den returns denominator coefficients
 
 % Find Poles and Zeros
 [O,X,k] = tf2zp(num,den) ;
@@ -23,8 +23,8 @@ opt = stepDataOptions('StepAmplitude',.2) ;           % inputting step input of 
 step(G_open,opt) ;                                       % response for the step input
 
 % Closed Transfer Function
+G = tf(num,den) 
 thetaDes = 0.2 ;
-Gcl = tf(num,thetaDes) ;
+Gcl = tf(num,thetaDes)
 
-step(Gcl,opt) ;
-
+feedback(Gcl)
