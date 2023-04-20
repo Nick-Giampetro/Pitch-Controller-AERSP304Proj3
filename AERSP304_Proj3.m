@@ -33,6 +33,7 @@ figure
 step(Gcl,opt)
 
 % Step 5
+%{
 s = tf('s');
 Gcl = Gcl*0.2/s
 [n,d] = tfdata(Gcl, 'v');      % returns numerator and denominator of closed loop as a row vector
@@ -42,6 +43,10 @@ f = (z(1)/(q-z(1))) + (z(2)/(q-z(2))) + (z(3)/(q-z(3))) + (z(4)/(q-z(4))) + (z(5
 theta = matlabFunction(ilaplace(f));
 t = 0:1:90;
 theta_t = theta(t);
+%}
+
+t = 0:1:90;
+theta_t = (0.0161*i*exp(0.0161*i*t-0.0562*t))+(0.0947*i*exp(0.0947*i*t-0.0105*t))-(0.0161*i*exp(-0.0161*i*t-0.0562*t))-(0.0947*i*exp(-0.0947*i*t+0.0105*t))-0.0914;
 figure
 plot(t,theta_t);
 
