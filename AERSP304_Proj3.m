@@ -26,21 +26,24 @@ step(G,opt) ;                                       % response for the step inpu
 
 % Closed Transfer Function
 K = 1 ;
-Gcl = feedback(G,K) ;
+Gcl = feedback(G,K); 
+
 
 figure
 step(Gcl,opt)
 
 % Step 5
 s = tf('s');
-[n,d] = tfdata(Gcl*0.2/s, 'v')      % returns numerator and denominator of closed loop as a row vector
+Gcl = Gcl*0.2/s
+[n,d] = tfdata(Gcl, 'v');      % returns numerator and denominator of closed loop as a row vector
 [z,p] = residue(n,d);
 syms q
 f = (z(1)/(q-z(1))) + (z(2)/(q-z(2))) + (z(3)/(q-z(3))) + (z(4)/(q-z(4))) + (z(5)/(q-z(5)));
 theta = matlabFunction(ilaplace(f));
-
 t = 0:1:90;
-plot(t,theta)
+theta_t = theta(t);
+figure
+plot(t,theta_t);
 
 %Root Locus
 
