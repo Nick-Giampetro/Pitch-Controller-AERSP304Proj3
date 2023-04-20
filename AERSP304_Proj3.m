@@ -34,4 +34,4 @@ step(Gcl,opt)
 
 %Root Locus
 
-rltool(Gcl,0.2)
+controlSystemDesigner(Gcl,0.2)
