@@ -29,12 +29,11 @@ K = 1 ;
 Gcl = feedback(G,K) ;
 s = tf('s');
 z = zero(Gcl*0.2/s);
-p = pole(Gcl*0.2/s);
 
 figure
 step(Gcl,opt)
 
-% Step 5
+
 
 %Root Locus
 
