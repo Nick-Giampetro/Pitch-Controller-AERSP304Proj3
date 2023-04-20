@@ -16,7 +16,7 @@ G = ss(A,B,C,D) ;
 [num,den] = ss2tf(A,B,C,D) ;        % num returns transfer function numerator coefficients, den returns denominator coefficients for open-loop transfer function
 
 % Find Poles and Zeros
-[O,X,k] = tf2zp(num,den) ;
+[O,X,k] = tf2zp(num,den) ;                          % outputs zeros, poles, and k values
 
 % Step Input Response
 opt = stepDataOptions('StepAmplitude',.2) ;           % inputting step input of elevator
