@@ -47,7 +47,7 @@ theta_t = theta(t);
 figure
 plot(t,theta_t);
 
-
+% Step 6
 %Root Locus
 
 % controlSystemDesigner(Gcl,0.2)
