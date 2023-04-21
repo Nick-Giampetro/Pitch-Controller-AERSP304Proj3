@@ -54,6 +54,21 @@ plot(t,theta_t);
 %Root Locus
 rltool(Gcl)
 
-Gk2 = (6.6667 * (s+0.9)) / (s+3)
-Gk50 = (166.67 * (s+0.9)) / (s+3)
-Gk200 = (666.67 * (s+0.9)) / (s+3) 
+% G
+Ck2 = (6.6667 * (s+0.9)) / (s+3) ;
+Ck50 = (166.67 * (s+0.9)) / (s+3) ;
+Ck200 = (666.67 * (s+0.9)) / (s+3) ;
+
+Gk2 = feedback(G,Ck2) ;
+Gk50 = feedback(G,Ck50) ;
+Gk200 = feedback(G,Ck200) ;
+
+figure
+subplot(3,1,1)
+step(Gk2,opt)
+
+subplot(3,1,2)
+step(Gk50,opt)
+
+subplot(3,1,3)
+step(Gk200,opt)
