@@ -52,5 +52,5 @@ plot(t,theta_t);
 
 % Step 6
 %Root Locus
+rltool(Gcl)
 
-% controlSystemDesigner(Gcl,0.2)
