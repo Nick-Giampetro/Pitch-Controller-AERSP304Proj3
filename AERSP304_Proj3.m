@@ -50,7 +50,7 @@ theta_t = theta(t);
 figure
 plot(t,theta_t);
 
-% Step 6
+% Step 6 and 7
 %Root Locus
 rltool(Gcl)
 
