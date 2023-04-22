@@ -54,7 +54,7 @@ plot(t,theta_t);
 % Root Locus
 % rltool(Gcl)
 
-% Got these Compensator functions using rltool and copied them into here
+% used rl tool to generate the (s+z)/(s+p) term multiplied by desired K
 Ck2 = 2 * ((s+0.9) / (s+3)) ;
 Ck50 = 50 * ((s+0.9) / (s+3)) ;
 Ck200 = 200 * ((s+0.9) / (s+3)) ;
