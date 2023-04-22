@@ -26,9 +26,6 @@ G = tf(num,den);
 opt = stepDataOptions('StepAmplitude',.2) ;           % inputting step input of elevator
 figure
 step(G,opt) ;                                       % response for the step input
-title('Theta vs t for G')
-xlabel('time');
-ylabel('theta');
 
 % Step 4
 % Closed Transfer Function
@@ -37,9 +34,6 @@ Gcl = feedback(G,K);
 
 figure
 step(Gcl,opt)
-title('Theta vs t for Gcl')
-xlabel('time');
-ylabel('theta');
 
 % Step 5
 s = tf('s');
@@ -55,14 +49,13 @@ theta_t = theta(t);
 
 figure
 plot(t,theta_t);
-title('Theta vs t "manual" calculation')
+title('Theta vs t ')
 xlabel('time');
 ylabel('theta');
 
 % Step 6 and 7
 % Root Locus
-
-rltool(Gcl)
+% rltool(Gcl)
 
 % used rl tool to generate the (s+z)/(s+p) term multiplied by desired K
 Ck2 = 2 * ((s+0.9) / (s+3)) ;
