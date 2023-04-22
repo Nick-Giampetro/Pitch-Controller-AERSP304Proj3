@@ -51,13 +51,13 @@ figure
 plot(t,theta_t);
 
 % Step 6 and 7
-%Root Locus
-%rltool(Gcl)
+% Root Locus
+% rltool(Gcl)
 
-% Got these Compensator functions using rltool
-Ck2 = (6.6667 * (s+0.9)) / (s+3) ;
-Ck50 = (166.67 * (s+0.9)) / (s+3) ;
-Ck200 = (666.67 * (s+0.9)) / (s+3) ;
+% Got these Compensator functions using rltool and copied them into here
+Ck2 = 2 * ((s+0.9) / (s+3)) ;
+Ck50 = 50 * ((s+0.9) / (s+3)) ;
+Ck200 = 200 * ((s+0.9) / (s+3)) ;
 
 Gk2 = feedback(G*Ck2,1) ;
 Gk50 = feedback(G*Ck50,1) ;
@@ -66,9 +66,18 @@ Gk200 = feedback(G*Ck200,1) ;
 figure
 subplot(3,1,1)
 step(Gk2,opt)
+title('Theta vs t for compensator gain = 2')
+xlabel('time');
+ylabel('theta');
 
 subplot(3,1,2)
 step(Gk50,opt)
+title('Theta vs t for compensator gain = 50')
+xlabel('time');
+ylabel('theta');
 
 subplot(3,1,3)
 step(Gk200,opt)
+title('Theta vs t for compensator gain = 200')
+xlabel('time');
+ylabel('theta');
