@@ -23,7 +23,7 @@ G = tf(num,den);
 [O,X,k] = tf2zp(num,den) ;                          % outputs zeros, poles, and k values
 
 % Step Input Response
-opt = stepDataOptions('StepAmplitude',.2) ;           % inputting step input of elevator
+opt = stepDataOptions('StepAmplitude',.2) ;         % inputting step input of elevator (changing from unit amplitude to 0.2 rad)
 figure
 step(G,opt) ;                                       % response for the step input
 title('Step Response (Full Scale)')
