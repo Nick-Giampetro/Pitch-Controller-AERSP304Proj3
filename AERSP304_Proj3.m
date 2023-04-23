@@ -78,16 +78,16 @@ subplot(3,1,1)
 step(Gk2,opt)
 title('Theta vs t for compensator gain = 2')
 xlabel('time');
-ylabel('Theta');
+ylabel('Theta (rad)');
 
 subplot(3,1,2)
 step(Gk50,opt)
 title('Theta vs t for compensator gain = 50')
 xlabel('time');
-ylabel('Theta');
+ylabel('Theta (rad)');
 
 subplot(3,1,3)
 step(Gk200,opt)
 title('Theta vs t for compensator gain = 200')
 xlabel('time');
-ylabel('Theta');
+ylabel('Theta (rad)');
