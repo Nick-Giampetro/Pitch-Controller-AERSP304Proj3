@@ -29,7 +29,6 @@ step(G,opt) ;                                       % response for the step inpu
 title('Step Response (Full Scale)')
 xlabel('Time');
 ylabel('Theta (rad)');
-exportgraphics(F,['Open Loop Response','.jpg']);
 
 % Step 4
 % Closed Transfer Function
@@ -41,7 +40,7 @@ step(Gcl,opt)
 title('Step Response')
 xlabel('Time');
 ylabel('Theta (rad)');
-exportgraphics(F,['Closed Loop Response','.jpg']);
+exportgraphics(F,['Step Response','.jpg']);
 
 % Step 5
 s = tf('s');
