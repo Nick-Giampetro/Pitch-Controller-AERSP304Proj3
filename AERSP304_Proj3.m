@@ -62,7 +62,7 @@ ylabel('Theta (rad)');
 % Step 6 and 7
 % Root Locus
 
-% rltool(Gcl)     commented out so it does not open everytime
+% rltool(Gcl)     % commented out so it does not open everytime
 
 % used rl tool to generate the (s+z)/(s+p) term multiplied by desired K
 Ck2 = 2 * ((s+0.9) / (s+3)) ;
