@@ -24,7 +24,7 @@ G = tf(num,den);
 
 % Step Input Response
 opt = stepDataOptions('StepAmplitude',.2) ;         % inputting step input of elevator (changing from unit amplitude to 0.2 rad)
-figure
+f = figure;
 step(G,opt) ;                                       % response for the step input
 title('Step Response (Full Scale)')
 xlabel('Time');
@@ -35,7 +35,7 @@ ylabel('Theta (rad)');
 K = 1 ;
 Gcl = feedback(G,K); 
 
-figure
+f = figure;
 step(Gcl,opt)
 title('Step Response')
 xlabel('Time');
@@ -53,7 +53,7 @@ theta = matlabFunction(ilaplace(f));
 t = 0:.1:80;
 theta_t = theta(t);
 
-figure
+f = figure;
 plot(t,theta_t);
 title('Step Response (Manual Calculation)')
 xlabel('Time (seconds)');
@@ -73,7 +73,7 @@ Gk2 = feedback(G*Ck2,1) ;
 Gk50 = feedback(G*Ck50,1) ;
 Gk200 = feedback(G*Ck200,1) ;
 
-figure
+f = figure;
 subplot(3,1,1)
 step(Gk2,opt)
 title('Theta vs t for compensator gain = 2')
@@ -91,3 +91,4 @@ step(Gk200,opt)
 title('Theta vs t for compensator gain = 200')
 xlabel('Time');
 ylabel('Theta (rad)');
+exportgraphics(f,['Theta vs Time for different gain','.jpg']);
