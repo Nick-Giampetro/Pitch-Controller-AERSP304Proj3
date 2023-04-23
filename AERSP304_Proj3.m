@@ -50,7 +50,7 @@ Gcl = Gcl*0.2/s;
 syms q
 f = (z(1)/(q-p(1))) + (z(2)/(q-p(2))) + (z(3)/(q-p(3))) + (z(4)/(q-p(4))) + (z(5)/(q-p(5)));
 theta = matlabFunction(ilaplace(f));
-t = 0:1:80;
+t = 0:.1:80;
 theta_t = theta(t);
 
 figure
