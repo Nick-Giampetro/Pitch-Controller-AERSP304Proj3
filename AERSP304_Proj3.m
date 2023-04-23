@@ -27,7 +27,7 @@ opt = stepDataOptions('StepAmplitude',.2) ;         % inputting step input of el
 figure
 step(G,opt) ;                                       % response for the step input
 title('Step Response (Full Scale)')
-xlabel('Time (sec)');
+xlabel('Time');
 ylabel('Theta (rad)');
 
 % Step 4
@@ -38,7 +38,7 @@ Gcl = feedback(G,K);
 figure
 step(Gcl,opt)
 title('Step Response')
-xlabel('Time (sec)');
+xlabel('Time');
 ylabel('Theta (rad)');
 
 % Step 5
@@ -56,7 +56,7 @@ theta_t = theta(t);
 figure
 plot(t,theta_t);
 title('Step Response (Manual Calculation)')
-xlabel('Time (sec)');
+xlabel('Time (seconds)');
 ylabel('Theta (rad)');
 
 % Step 6 and 7
@@ -77,17 +77,17 @@ figure
 subplot(3,1,1)
 step(Gk2,opt)
 title('Theta vs t for compensator gain = 2')
-xlabel('Time (sec)');
+xlabel('Time');
 ylabel('Theta (rad)');
 
 subplot(3,1,2)
 step(Gk50,opt)
 title('Theta vs t for compensator gain = 50')
-xlabel('Time (sec)');
+xlabel('Time');
 ylabel('Theta (rad)');
 
 subplot(3,1,3)
 step(Gk200,opt)
 title('Theta vs t for compensator gain = 200')
-xlabel('Time (sec)');
+xlabel('Time');
 ylabel('Theta (rad)');
