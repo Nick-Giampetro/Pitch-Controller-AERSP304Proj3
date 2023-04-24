@@ -65,7 +65,7 @@ exportgraphics(F,['Manual Theta Calc','.jpg']);
 % Step 6 and 7
 % Root Locus
 
-rltool(Gcl)     % commented out so it does not open everytime
+% rltool(Gcl)     % commented out so it does not open everytime
 
 % used rl tool to generate the (s+z)/(s+p) term multiplied by desired K
 Ck2 = 2 * ((s+0.9) / (s+3)) ;
@@ -77,21 +77,22 @@ Gk50 = feedback(G*Ck50,1) ;
 Gk200 = feedback(G*Ck200,1) ;
 
 F = figure;
-subplot(3,1,1)
 step(Gk2,opt)
-title('Theta vs t for compensator gain = 2')
+title('Theta vs Time for compensator gain = 2')
 xlabel('Time');
 ylabel('Theta (rad)');
+exportgraphics(F,['Theta vs Time for k = 2','.jpg']);
 
-subplot(3,1,2)
+F = figure;
 step(Gk50,opt)
-title('Theta vs t for compensator gain = 50')
+title('Theta vs Time for compensator gain = 50')
 xlabel('Time');
 ylabel('Theta (rad)');
+exportgraphics(F,['Theta vs Time for k = 50','.jpg']);
 
-subplot(3,1,3)
+F = figure;
 step(Gk200,opt)
-title('Theta vs t for compensator gain = 200')
+title('Theta vs Time for compensator gain = 200')
 xlabel('Time');
 ylabel('Theta (rad)');
-exportgraphics(F,['Theta vs Time for different gain','.jpg']);
+exportgraphics(F,['Theta vs Time for k = 200','.jpg']);
