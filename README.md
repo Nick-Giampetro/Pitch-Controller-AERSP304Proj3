@@ -4,4 +4,4 @@ AERSP 304 Project 3
 
 Project by Nicholas Giampetro, Craig Stenstrom, Payton Glynn
 
-Originally completed for AERSP 304 on -/-/----, this repository serves to archive this project for myself and my colleagues who worked on it.
+Originally completed for AERSP 304 on 4/24/2023, this repository serves to archive this project for myself and my colleagues who worked on it.
